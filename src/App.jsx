@@ -1,9 +1,13 @@
 import { width } from "@mui/system";
-import React from "react";
+import React, { useState } from "react";
 import { Container } from "@mui/material";
 import Searcher from "./componets/Searcher"
 
 const App = () => {
+
+    const [inputUser, setInputUser] = useState('saorion');
+    const [userStarter, userState] = useState('inputUser');
+    
     return(
         <Container sx= {{
             background:"whitesmoke",
@@ -15,7 +19,7 @@ const App = () => {
             flexDirection:"column",
             alignItems:"center",
         }} >
-        <Searcher>Soy Saori</Searcher>
+        <Searcher inputUser={inputUser} setInputUser={setInputUser}/>
         </Container>
     )
 };
