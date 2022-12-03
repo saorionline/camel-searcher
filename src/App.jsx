@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Container } from "@mui/material";
 import Searcher from "./componets/Searcher";
-import { getGitHubUser } from "./services/users"
+import { getGitHubUser } from "./services/users";
+import UserCard from "./containers/UserCard";
+
 const App = () => {
 
     const [inputUser, setInputUser] = useState('saorionline');
@@ -42,6 +44,7 @@ const App = () => {
             alignItems:"center",
         }} >
         <Searcher inputUser={inputUser} setInputUser={setInputUser}/>
+        <UserCard userState = {userState}/>
         </Container>
     )
 };

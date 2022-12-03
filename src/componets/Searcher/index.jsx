@@ -23,7 +23,7 @@ return (
     }}>
     <TextField
         id="outlined-basic"
-        label="Social Media User"
+        label="GitHub User"
         placeholder="Saorion"
         variant="outlined"
         size="small"
