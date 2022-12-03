@@ -14,36 +14,37 @@ const Searcher = (props) => {
         setValueInput(inputValue);
     }
 
-    console.log(valueInput);
+    console.log('valueInput', valueInput);
 
-   // const handleSubmit = () => {
+   const handleSubmit = () => {
+    setInputUser(valueInput);
+    console.log('inputUser', inputUser);
+   }
 
-   // }
-
-    return (
+return (
     <Stack 
-        sx={{
-        direction: 'row',
+        direction="row"
+        sx={{   
         marginTop: '30px',
         width: '60%',
     }}
     >
     <TextField
         id="outlined-basic"
-        label="GitHub User"
+        label="Social Media User"
         placeholder="Saorion"
         variant="outlined"
         size="small"
         valueInput={valueInput}
         onChange={onSearchValueChange}
         sx={{
-          width: '90%',
+          width: '50%',
         }}   
     />
-      <IconButton 
-        //onClick={handleSubmit}
-      sx={{
-        size:'small',
+    <IconButton 
+    onClick={handleSubmit}
+    size="small"
+      sx={{ 
         left:'-45px'
     }}>
         <SearchIcon/>

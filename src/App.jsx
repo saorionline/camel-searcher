@@ -1,4 +1,3 @@
-import { width } from "@mui/system";
 import React, { useState } from "react";
 import { Container } from "@mui/material";
 import Searcher from "./componets/Searcher"
