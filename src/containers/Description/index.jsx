@@ -8,10 +8,10 @@
     const { bio } = userState
     return(
         <Fragment>
-            <Stack>
+            <Stack sx={{justifyContent: 'center'}}>
                 {bio !== null
-                ?<Typography>{bio}</Typography>
-                :<Typography>About the profile</Typography>
+                ?<Typography variant="body1">{bio}</Typography>
+                :<Typography variant="body2">About the profile</Typography>
             }
             </Stack>
             <PaperInfo userState={userState}/>
